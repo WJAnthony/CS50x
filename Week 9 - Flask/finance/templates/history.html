@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h2>History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- for loop using jinja syntax -->
+            {% for row in rows %}
+                <tr>
+            <!-- inserting stock -->
+                    <td>{{ row.stock }}</td>
+            <!-- inserting price -->
+                    <td>{{ row.price | usd }}</td>
+            <!-- inserting quantity-->
+                    <td>{{ row.quantity }}</td>
+            <!-- inserting date-->
+                    <td>{{ row.date }}</td>
+            <!-- inserting type-->
+                    <td>{{ row.type }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

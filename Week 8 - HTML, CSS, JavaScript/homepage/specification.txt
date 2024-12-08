@@ -1,0 +1,6 @@
+10 HTML tags: <div>, <p>, <input>, <button>, <h1>, <script>, <hr>, <footer>, <img>, <blockquote>, <h2>
+
+CSS properties: background-color, colour, front-size, padding, text-align
+
+Java-script: Made all buttons interative, when mouse hovers over button, button changes colour
+Bootstrap: Use the Accodrion, card and dropdown features when building the 4 HTML pages

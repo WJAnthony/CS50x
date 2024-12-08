@@ -1,0 +1,5 @@
+Q1: I would characterise their audio aura as purple (confident and energetic) and blue (emotional). This is because the average danceability and energy are 0.71646 and 0.65906 respectively which are relatively high while the average valence is low at only 0.484443
+
+Q2:
+A: Firstly, The aura only takes into 3 factors (energy, valence, danceability). Secondly, there are other factors that the listener takes into account when deciding what songs to listen to. Thirdly, the songs a listener listen to may be different to their personality
+B: Include more factors such as tempo, variability (in terms of tempo and change in beats), volume and others. Include those into calculation of the listener's aura.

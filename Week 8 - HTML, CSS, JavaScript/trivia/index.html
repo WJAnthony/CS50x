@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // adding event listener to the correct option
+                document.querySelector('.correct').addEventListener('click', function(){
+                    // changing the color to green
+                    document.querySelector('.correct').style.backgroundColor = 'green'
+                    // printing out result
+                    document.querySelector('#Q1result').innerHTML = "Correct!"
+                    });
+
+                // declaring all incorrects into a array/list
+                let incorrects = document.querySelectorAll('.incorrect');
+
+                for (let i = 0; i < incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener('click', function(){
+                    // changing the color to red
+                    incorrects[i].style.backgroundColor = 'red'
+                    // printing out result
+                    document.querySelector('#Q1result').innerHTML = "Incorrect!"
+                    });
+                }
+
+
+                // adding event listener to check button
+                document.querySelector('#check').addEventListener('click', function(){
+                    if (document.querySelector('input').value === 'Brazil' || 'brazil')
+                    {
+                        // changing the color to green
+                        document.querySelector('input').style.backgroundColor = 'green'
+                        // printing out result
+                        document.querySelector('#Q2result').innerHTML = "Correct!"
+                    }
+                    else
+                    {
+                        // changing the color to red
+                        document.querySelector('input').style.backgroundColor = 'red'
+                        // printing out result
+                        document.querySelector('#Q2result').innerHTML = "Incorrect!"
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In what month of what year did World War 2 end?</h3>
+                <Button class="incorrect">July 1944</Button>
+                <Button class="incorrect">August 1944</Button>
+                <Button class="incorrect">September 1944</Button>
+                <Button class="incorrect">July 1945</Button>
+                <Button class="correct">August 1945</Button>
+                <Button class="incorrect">September 1945</Button>
+                <p id="Q1result"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <p>What is the largest country in South Ameria by landsize?</p>
+                <input type="text"></input>
+                <button id="check">Check</button>
+                <p id="Q2result"></p>
+            </div>
+        </div>
+    </body>
+</html>

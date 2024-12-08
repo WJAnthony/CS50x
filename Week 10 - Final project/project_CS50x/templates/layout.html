@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.3/ -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <!-- https://favicon.io/emoji-favicons/cut-of-meat -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>KnowYourMeat: {% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <div class="header" text-align: center>
+            <h1>
+                <img src="/static/favicon.ico" alt="Logo" width="75" height="60"> KnowYourMeat.com <img src="/static/favicon.ico" alt="Logo" width="75" height="60">
+            </h1>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="/">
+                    <img src="/static/favicon(2).ico" alt="Logo" width="60" height="48" class="d-inline-block align-text-center">
+                    Homepage
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/compare">Compare</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/tabulated">Tabulated Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/protein">Protein</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/nutrients">Nutrients</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container py-5">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="mb-5">
+            <hr>
+            <p class="mb-3 small text-center text-muted">
+                Copyright &#169 Anthony Chow
+            </p>
+        </footer>
+
+    </body>
+
+</html>

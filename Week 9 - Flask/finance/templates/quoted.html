@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <!-- inserting stock's symbol-->
+                <td>{{ symbol }}</td>
+            <!-- inserting stock's price -->
+                <td>{{ price }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

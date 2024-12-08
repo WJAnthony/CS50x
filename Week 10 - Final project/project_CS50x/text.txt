@@ -1,0 +1,73 @@
+CREATE TABLE meats_for_comparison (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    calories NUMERIC NOT NULL,
+    protein NUMERIC NOT NULL,
+    fats NUMERIC NOT NULL,
+    saturated_fats NUMERIC NOT NULL,
+    monounsaturated_fats NUMERIC NOT NULL,
+    polyunsaturated_fats NUMERIC NOT NULL
+);
+
+INSERT INTO meats (name) VALUES("Bacon");
+INSERT INTO meats (name) VALUES("Beef");
+INSERT INTO meats (name) VALUES("Bison");
+INSERT INTO meats (name) VALUES("Bratwurst");
+INSERT INTO meats (name) VALUES("Chicken Breast");
+INSERT INTO meats (name) VALUES("Chicken Thigh");
+INSERT INTO meats (name) VALUES("Cod");
+INSERT INTO meats (name) VALUES("Crab");
+INSERT INTO meats (name) VALUES("Duck");
+INSERT INTO meats (name) VALUES("Egg");
+INSERT INTO meats (name) VALUES("Goat");
+INSERT INTO meats (name) VALUES("Ham");
+INSERT INTO meats (name) VALUES("Hot Dog");
+INSERT INTO meats (name) VALUES("Lamb");
+INSERT INTO meats (name) VALUES("Liver");
+INSERT INTO meats (name) VALUES("Mutton");
+INSERT INTO meats (name) VALUES("Pepperoni");
+INSERT INTO meats (name) VALUES("Ground Pork");
+INSERT INTO meats (name) VALUES("Pork Chops");
+INSERT INTO meats (name) VALUES("Rabbit");
+INSERT INTO meats (name) VALUES("Salami");
+INSERT INTO meats (name) VALUES("Salmon");
+INSERT INTO meats (name) VALUES("Italian Sausage");
+INSERT INTO meats (name) VALUES("Shrimp");
+INSERT INTO meats (name) VALUES("Steak");
+INSERT INTO meats (name) VALUES("Canned Tuna");
+INSERT INTO meats (name) VALUES("Fresh Tuna");
+INSERT INTO meats (name) VALUES("Turkey Breast");
+INSERT INTO meats (name) VALUES("Ground Turkey");
+INSERT INTO meats (name) VALUES("Venison");
+
+
+INSERT INTO meats_for_comparison VALUES (1, "Bacon", "535", "38", "40", "13.3", "18", "4.4");
+INSERT INTO meats_for_comparison VALUES (2, "Beef", "230", "29", "12", "4.8", "5.1", "0.4");
+INSERT INTO meats_for_comparison VALUES (3, "Bison", "180", "26", "9", "3.5", "3.3", "0.4");
+INSERT INTO meats_for_comparison VALUES (4, "Bratwurst", "335", "14", "29", "10", "14.7", "2.6");
+INSERT INTO meats_for_comparison VALUES (5, "Chicken Breast", "165", "31", "4", "1", "1.2", "0.8");
+INSERT INTO meats_for_comparison VALUES (6, "Chicken Thigh", "210", "26", "11", "3", "4.2", "2.5");
+INSERT INTO meats_for_comparison VALUES (7, "Cod", "105", "23", "1", "0.2", "0.1", "0.3");
+INSERT INTO meats_for_comparison VALUES (8, "Crab", "110", "22", "1", "0.2", "0.2", "0.4");
+INSERT INTO meats_for_comparison VALUES (9, "Duck", "200", "24", "11", "4.2", "3.7", "1.4");
+INSERT INTO meats_for_comparison VALUES (10, "Egg", "200", "14", "15", "4.3", "6.3", "2.7");
+INSERT INTO meats_for_comparison VALUES (11, "Goat", "145", "27", "3", "0.9", "1.4", "0.2");
+INSERT INTO meats_for_comparison VALUES (12, "Ham", "165", "17", "9", "2.9", "4.4", "0.8");
+INSERT INTO meats_for_comparison VALUES (13, "Hot Dog", "305", "12", "28", "10.8", "13.7", "2.7");
+INSERT INTO meats_for_comparison VALUES (14, "Lamb", "310", "23", "24", "10.2", "9.7", "1.9");
+INSERT INTO meats_for_comparison VALUES (15, "Liver", "175", "27", "5", "1.5", "0.7", "0.6");
+INSERT INTO meats_for_comparison VALUES (16, "Mutton", "235", "33", "11", "5.1", "4.5", "0.8");
+INSERT INTO meats_for_comparison VALUES (17, "Pepperoni", "495", "23", "44", "14.9", "17.2", "3.4");
+INSERT INTO meats_for_comparison VALUES (18, "Ground Pork", "300", "26", "21", "7.7", "9.2", "1.9");
+INSERT INTO meats_for_comparison VALUES (19, "Pork Chops", "340", "22", "28", "10.2", "11.7", "3.1");
+INSERT INTO meats_for_comparison VALUES (20, "Rabbit", "175", "33", "3.5", "1.1", "0.9", "0.7");
+INSERT INTO meats_for_comparison VALUES (21, "Salami", "425", "22", "37", "13.1", "18.2", "3.6");
+INSERT INTO meats_for_comparison VALUES (22, "Salmon", "170", "21", "9", "1.5", "4.1", "1.9");
+INSERT INTO meats_for_comparison VALUES (23, "Italian Sausage", "345", "19", "27", "9.5", "12", "3.3");
+INSERT INTO meats_for_comparison VALUES (24, "Shrimp", "100", "21", "1", "0.3", "0.2", "0.4");
+INSERT INTO meats_for_comparison VALUES (25, "Steak", "265", "27", "17", "6.7", "7.1", "0.6");
+INSERT INTO meats_for_comparison VALUES (26, "Canned Tuna", "115", "26", "1", "0.2", "0.2", "0.3");
+INSERT INTO meats_for_comparison VALUES (27, "Fresh Tuna", "110", "23", "1", "0.2", "0.2", "0.3");
+INSERT INTO meats_for_comparison VALUES (28, "Turkey Breast", "135", "30", "1", "0.2", "0.1", "0.2");
+INSERT INTO meats_for_comparison VALUES (29, "Ground Turkey", "235", "27", "13", "3.4", "4.9", "3.2");
+INSERT INTO meats_for_comparison VALUES (30, "Venison", "185", "27", "8", "4", "1.9", "0.4");

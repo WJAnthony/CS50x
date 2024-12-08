@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h2>Portfolio</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Stocks owned</th>
+                <th>Number of shares</th>
+                <th>Current price</th>
+                <th>Total value</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- for loop using jinja syntax -->
+            {% for stock in stocks %}
+                <tr>
+            <!-- inserting stock -->
+                    <td>{{ stock.stock }}</td>
+            <!-- inserting quantity -->
+                    <td>{{ stock.quantity }}</td>
+            <!-- inserting current price -->
+                    <td>{{ stock.current_price | usd}}</td>
+            <!-- inserting total value -->
+                    <td>{{ stock.total_value | usd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Current cash balance</th>
+                <th>Grand total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ funds }}</td>
+                <td>{{ grand_total }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

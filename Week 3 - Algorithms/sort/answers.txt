@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: When sorting the "sorted" lists, this sort took the least amount of time amoung the three; It took 0.0485s to sort sorted50000;
+
+sort2 uses: merge sort
+
+How do you know?: When sorting the "random" lists, this sort took the least amount of time amoung the three; It took 0.432s to sort random50000;
+
+sort3 uses: selection sort
+
+How do you know?: It took 2.387s to sort sorted50000 list and 2.710s to sort reversed5000 list;
