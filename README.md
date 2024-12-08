@@ -2,11 +2,14 @@
 
 [CS50x Certificate.pdf](https://github.com/user-attachments/files/18052015/CS50x.Certificate.pdf)
 
+
 ## Topics 
 Abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development
 
+
 ## Languages
 C, Python, SQL, JavaScript, CSS, HTML
+
 
 ## Objectitves
 - A broad and robust understanding of computer science and programming
