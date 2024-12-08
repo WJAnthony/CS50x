@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Protein
+{% endblock %}
+
+{% block main %}
+    <div class="image">
+        <img src="https://vectormine.com/wp-content/uploads/Protein_Structure_2_outline.jpg" class="center" alt="Protein structure">
+    </div>
+    <div class="container">
+        <div class="main_text">
+            <h2><i>Proteins & Amino Acids</i></h2>
+            <p>Protein is a nutrient our body needs to grow and repair cells, and to perform many other body functions.</p>
+            <p>They are made up of building blocks called amino acids and are referred to as the building blocks of life.</p>
+            <p>There are 20 different amino acids that link together in different combinations, each having its unique use within the body,
+                ranging from building muscle and bone to creating enzymes and hormones.</p>
+            <p>Of the 20 amino-acids, the human body is only able to synthesise 11 of them, also known as non-essential amino acids. The other 9,
+                known as essential amino acids, cannot be synthesised and thus must be wholly met by our diet for optimal body function.</p>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ESSENTIAL AMINO ACIDS
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Essential amino acids cannot be made by the body. As a result, they must come from the food we consume.</li>
+                            <li>The 9 essential amino acids are: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        NONESSENTIAL AMINO ACIDS
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Nonessential means that our bodies can produce the amino acid, even if we do not get it from the food we eat.</li>
+                            <li>Nonessential amino acids include: alanine, arginine, asparagine, aspartic acid, cysteine, glutamic acid, glutamine, glycine, proline, serine, and tyrosine.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        CONDITIONALLY ESSENTIAL AMINO ACIDS
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Conditionally essential amino acids are usually not essential, except in times of illness and stress.</li>
+                            <li>Conditionally essential amino acids include: arginine, cysteine, glutamine, tyrosine, glycine, proline, and serine.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

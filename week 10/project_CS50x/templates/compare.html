@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Compare - Choose 5 different meats
+{% endblock %}
+
+{% block main %}
+    <div class="main_text">
+        <p>
+            <h2><b>All Meats</b></h2>
+            <h3><i>Choose 5 meat options</i></h3>
+        </p>
+        <form action="/compare" method="post">
+            <p>
+                <div id="checkboxgroup">
+                    {% for meat in meats %}
+                        <div class="form-check form-check-inline text-left">
+                            <input class="form-check-input" type="checkbox" name="meats" value="{{meat.name}}" id="{{meat.name}}">
+                            <label class="form-check-label" for="{{meat.name}}">
+                                {{ meat.name }}
+                            </label><br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </p>
+            <p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="submit" text-align: center>Compare</button>
+                </div>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        function onlyOneCheckBox() {
+            var checkboxgroup = document.getElementById('checkboxgroup').getElementsByTagName("input");
+
+        //Note #2 Change max limit here as necessary
+            var limit = 5;
+
+            for (var i = 0; i < checkboxgroup.length; i++) {
+                checkboxgroup[i].onclick = function() {
+                    var checkedcount = 0;
+                    for (var i = 0; i < checkboxgroup.length; i++) {
+                        checkedcount += (checkboxgroup[i].checked) ? 1 : 0;
+                    }
+                    if (checkedcount > limit) {
+                        console.log("You can select maximum of " + limit + " checkbox.");
+                        alert("You can select maximum of " + limit + " checkbox.");
+                        this.checked = false;
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        onlyOneCheckBox()
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add funds
+{% endblock %}
+
+{% block main %}
+    <form action="/addfunds" method="post">
+        <p>To top-up your current cash balance, insert your desired amount in the box below</p>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="addfunds" placeholder="Input amount to add" type="float" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Add funds</button>
+    </form>
+{% endblock %}

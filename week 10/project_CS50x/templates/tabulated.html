@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tabulated data
+{% endblock %}
+
+{% block main %}
+    <figcaption class="blockquote-footer">
+        Source:<cite title="Source Title"> USDA's National Nutrient Database for Standard Reference's website</cite>
+    </figcaption>
+
+    <div class="container">
+        <div class="main_text">
+            <p>The table below features the 30 most commonly eaten options in the <b>Meat</b> food group.
+                The 5 nutrients: Calories, Protein, Fats, Saturated fats (SF), Monounsaturated fats (MUF), Polyunsaturated fats (PUF).
+                Calories are measured in calories (kcal) while the rest are in grams (g), based on 100g of the meat in question.</p>
+            <p>To view a sorted table based on the value of each nutrient, click the header, according to the nutrient you wish to sort the table by,
+                once for ascending and again for descending. </p>
+        </div>
+
+        <div>
+            <h2>All Meats</h2>
+            <table id="allmeats" class="table table-bordered">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Name</th>
+                        <th onclick="sortTable(1)">Calories</th>
+                        <th onclick="sortTable(2)">Protein</th>
+                        <th onclick="sortTable(3)">Fats</th>
+                        <th onclick="sortTable(4)">Saturated fats</th>
+                        <th onclick="sortTable(5)">Monounsaturated fats</th>
+                        <th onclick="sortTable(6)">Polyunsaturated fats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- for loop using jinja syntax -->
+                    {% for meat in meats %}
+                        <tr>
+                    <!-- inserting name -->
+                            <td>{{ meat.name }}</td>
+                    <!-- inserting calories -->
+                            <td>{{ meat.calories }}</td>
+                    <!-- inserting proteins -->
+                            <td>{{ meat.protein }}</td>
+                    <!-- inserting fats -->
+                            <td>{{ meat.fats}}</td>
+                    <!-- inserting sf -->
+                            <td>{{ meat.saturated_fats }}</td>
+                    <!-- inserting muf -->
+                            <td>{{ meat.monounsaturated_fats }}</td>
+                    <!-- inserting puf -->
+                            <td>{{ meat.polyunsaturated_fats }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("allmeats");
+            switching = true;
+        // Set the sorting direction to ascending:
+            dir = "asc";
+        /* Make a loop that will continue until
+        no switching has been done: */
+            while (switching) {
+            // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+            /* Loop through all table rows (except the
+            first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                /* Get the two elements you want to compare,
+                one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                /* Check if the two rows should switch place,
+                based on the direction, asc or desc: */
+                    if (dir == "asc") {
+                        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                        // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                /* If a switch has been marked, make the switch
+                and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                // Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                } else {
+                /* If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again. */
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
+{% endblock %}
